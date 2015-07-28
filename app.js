@@ -17,3 +17,6 @@ bot.getMe().then(function (me) {
 
 var msc = require('./node_modules/apps/music');
 msc.Music(bot);
+
+var cmd = require('./node_modules/apps/movies');
+cmd.Movie(bot);
