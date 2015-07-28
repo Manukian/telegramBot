@@ -4,7 +4,6 @@
 console.log('node worked correctly');
 
 var botApi = require('node-telegram-bot-api');
-console.log(botApi);
 var options = {
   polling: true
 };
@@ -14,4 +13,10 @@ var token = '123731375:AAHeCtHyhTE7W79hw1beOVDt1MSy2PnIqaI';
 var bot = new botApi(token, options);
 bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
+});
+
+bot.on('message', function (msg) {
+    if (msg.text == 'do the dishes') {
+        bot.sendMessage(msg.chat.id, 'fuck you');
+    }
 });
