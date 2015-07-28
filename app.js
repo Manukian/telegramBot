@@ -20,3 +20,4 @@ msc.Music(bot);
 
 var cmd = require('./node_modules/apps/movies');
 cmd.Movie(bot);
+
