@@ -15,5 +15,5 @@ bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
 });
 
-var msc = require('./music');
+var msc = require('./node_modules/apps/music');
 msc.Music(bot);
