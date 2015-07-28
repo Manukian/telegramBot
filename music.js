@@ -1,8 +1,9 @@
+var request = require('request');
 function Music(bot) {
     bot.on('message', function (msg) {
-        if (msg.text == 'do the dishes') {
-            bot.sendMessage(msg.chat.id, 'fuck you');
-        }
+        var url = 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg';
+        var audio = request(url);
+        bot.sendAudio(msg.chat.id, audio);
     });
 }
 exports.Music = Music;
