@@ -15,8 +15,5 @@ bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
 });
 
-bot.on('message', function (msg) {
-    if (msg.text == 'do the dishes') {
-        bot.sendMessage(msg.chat.id, 'fuck you');
-    }
-});
+var msc = require('./music');
+msc.Music(bot);
